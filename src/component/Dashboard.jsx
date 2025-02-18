@@ -25,9 +25,9 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-      <div className="bg-white shadow-lg rounded-lg p-6">
-        <h2 className="text-xl font-bold text-center mb-4">User Profile</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-gray-100 min-h-screen">
+      <div className="bg-white shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105 duration-300">
+        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">User Profile</h2>
         <div className="text-center">
           <img
             src={
@@ -36,7 +36,7 @@ const Dashboard = () => {
                 : "default-placeholder-image-url"
             }
             alt="Profile"
-            className="w-24 h-24 rounded-full mx-auto border-2 border-gray-300"
+            className="w-28 h-28 rounded-full mx-auto border-4 border-indigo-500"
           />
           <p className="mt-4 text-gray-700">
             <span className="font-medium">First Name:</span> {user.firstName}
@@ -52,10 +52,8 @@ const Dashboard = () => {
           </p>
         </div>
       </div>
-
-      
-      <div className="bg-white shadow-lg rounded-lg p-6">
-        <h2 className="text-xl font-bold mb-4">Recent Activities</h2>
+      <div className="bg-white shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105 duration-300">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Recent Activities</h2>
         <ul className="list-disc pl-6 text-gray-700 space-y-2">
           <li>Logged in at 10:30 AM</li>
           <li>Updated profile details</li>
@@ -63,16 +61,39 @@ const Dashboard = () => {
         </ul>
       </div>
 
+ 
+
+    
+      <div className="bg-white shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105 duration-300 col-span-1 md:col-span-2 lg:col-span-1">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Statistics</h2>
+        <div className="space-y-4">
+          <div className="flex justify-between">
+            <p className="text-gray-600">Total Posts</p>
+            <p className="font-semibold text-indigo-600">120</p>
+          </div>
+          <div className="flex justify-between">
+            <p className="text-gray-600">Followers</p>
+            <p className="font-semibold text-indigo-600">1,200</p>
+          </div>
+          <div className="flex justify-between">
+            <p className="text-gray-600">Following</p>
+            <p className="font-semibold text-indigo-600">350</p>
+          </div>
+        </div>
+      </div>
+
       
-      <div className="bg-white shadow-lg rounded-lg p-6">
-        <h2 className="text-xl font-bold mb-4">Quick Actions</h2>
-        <div className="grid grid-cols-2 gap-4">
-          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-            Edit Profile
-          </button>
-          <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
-            Logout
-          </button>
+      <div className="bg-white shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105 duration-300 col-span-1 md:col-span-2 lg:col-span-1">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-6">Notifications</h2>
+        <div className="space-y-4">
+          <div className="bg-gray-100 p-4 rounded-md shadow-sm">
+            <p className="text-gray-700">New comment on your post.</p>
+            <p className="text-sm text-gray-500">2 hours ago</p>
+          </div>
+          <div className="bg-gray-100 p-4 rounded-md shadow-sm">
+            <p className="text-gray-700">New follower: John Doe</p>
+            <p className="text-sm text-gray-500">1 day ago</p>
+          </div>
         </div>
       </div>
     </div>
